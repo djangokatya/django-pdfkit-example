@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holidys for {{ name }} city</title>
+</head>
+<body>
+<div>
+    <h2>Holidys for {{ name }} city</h2>
+    <p>Be prepared for this festive season.</p></div>
+<div
+        {% for x in holidays %}
+            <p class="inner">{{ forloop.counter }}. <b>{{ x.date }}.</b> {{ x.summary }}</p>
+        {% endfor %}
+</div>
+</body>
+</html>
